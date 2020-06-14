@@ -14,7 +14,7 @@ Knowing how to test PRs also allows you to use the stuff in them even before the
 
 ### How?
 
-It's actually quite easy, but assumes you are familiar with `git` and how its branching works at the basic level.
+It's actually quite easy, but assuming you are familiar with `git` and how its branching works at the basic level.
 
 There are also multiple ways to do this (as is usual with `git`), this is just my workflow
 

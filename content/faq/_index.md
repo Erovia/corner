@@ -20,7 +20,7 @@ Quick answers to frequent questions.
 ---
 
 ### Q: What's the relationship between VIA and QMK?
-**A**: [VIA](https://caniusevia.com) is a tool that let's you modify the keymap of your keyboard on the fly. The firmware on your keyboard will still be QMK.
+**A**: [VIA](https://caniusevia.com) is a tool that allows you modify the keymap of your keyboard on the fly. The firmware on your keyboard will still be QMK.
 
 ---
 
@@ -48,7 +48,7 @@ You can also enable the VIA functionality for your already existing keymap.
 ---
 
 ### Q: QMK Configurator - where is the keymap.c?
-**A**: the Configurator no longer offers `keymap.c`, instead it provides a `keymap.json`. You have multiple posibilies with this file:
+**A**: the Configurator no longer offers `keymap.c`, instead it provides a `keymap.json`. You have multiple possibilies with this file:
 
 * convert it to `keymap.c`
 ```shell
@@ -68,7 +68,10 @@ qmk compile /path/to/keymap.json
 **A**: It's important to understand, that your keyboard does not send characters, but keycodes (actually [scancodes](https://en.wikipedia.org/wiki/Scancode), but for the sake of simplicity, let's say they are the same thing). What this keycodes will represent, depends on the locale settings of your OS.  
 Let's say you'd like to type `ß`. The keycode for this letter in with German locale is the same is the `-`'s in the US English locale.  
 Since Configurator uses the latter's keycodes, if you assign `KC_MINS` to a key, it will output `ß` with your German locale.  
-*Tip*: Use the content of the [extra keymaps](https://github.com/qmk/qmk_firmware/tree/master/quantum/keymap_extras) to find the necessary US English keycodes.
+
+{{% notice tip %}}
+Use the content of the [extra keymaps](https://github.com/qmk/qmk_firmware/tree/master/quantum/keymap_extras) to find the necessary US English keycodes.
+{{% /notice %}}
 
 ---
 
@@ -81,5 +84,5 @@ Look for:
 * if none of the above is an option, you can also short the RST and GND pins on your board's microcontroller (*not recommended*)
 
 {{% notice warning %}}
-Shorting the pins on the microcontroller is potentially **dangerious**. Use it only as a last resort.
+Shorting the pins on the microcontroller is potentially **dangerous**. Use it only as a last resort.
 {{% /notice %}}
