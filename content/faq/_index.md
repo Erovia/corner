@@ -86,3 +86,8 @@ Look for:
 {{% notice warning %}}
 Shorting the pins on the microcontroller is potentially **dangerous**. Use it only as a last resort.
 {{% /notice %}}
+
+---
+
+### Q: Help, Control and CapsLock (or Alt and GUI) are swapped!
+**A**: You most likely activated a [bootmagic](https://docs.qmk.fm/#/feature_bootmagic) functionality. Check the docs for the key that can swap them back.
