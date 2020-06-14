@@ -1,0 +1,34 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Erovia's QMK Corner"
+theme = "hugo-theme-learn"
+
+[params]
+  editURL = "https://github.com/Erovia/corner/"
+  author = "Erovia"
+  description = "Erovia's QMK Corner"
+  themeVariant = "erovia"
+  disableNextPrev = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]] 
+name = "<i class='fas fa-book'></i> QMK Docs"
+url = "https://docs.qmk.fm"
+weight = 10
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> My QMK fork"
+url = "https://github.com/Erovia/qmk_firmware"
+weight = 15
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-reddit'></i> OLKB subreddit"
+url = "https://www.reddit.com/r/olkb"
+weight = 20
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-discord'></i> QMK Discord"
+url = "https://discord.gg/PRFxj8"
+weight = 25

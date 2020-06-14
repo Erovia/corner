@@ -1,0 +1,7 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/erovia/erovia.github.io.git
+	branch = master
+[submodule "themes/hugo-theme-learn"]
+	path = themes/hugo-theme-learn
+	url = https://github.com/matcornic/hugo-theme-learn.git
