@@ -47,3 +47,11 @@ Allows you to upload a `glcdfont.c` file, edit it and save it back to C file. Us
 https://joric.github.io/qle
 
 Another useful tool for users of OLED screens.
+
+---
+
+### Combo generator
+
+https://codepen.io/mvaneijgen/full/LYEVQXp
+
+Handy tool for generating [Combos](https://docs.qmk.fm/#/feature_combo?id=combos).
