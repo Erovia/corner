@@ -1,6 +1,6 @@
 ---
 menuTitle: Workflow
-title: My personal workflow with QMK
+title: My personal workflow for QMK
 ---
 
 Let's be honest, `git` can be intimidating.
