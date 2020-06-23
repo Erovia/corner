@@ -1,6 +1,7 @@
 ---
 title: "Testing Pull Requests"
 menuTitle: "Testing"
+weight: 10
 ---
 
 ### Why?
