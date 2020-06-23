@@ -9,6 +9,8 @@ For things that's for your personal use only, check out my [general workflow](/p
 
 One of the best things about `git` is it's branching. It's fast and allows us to experiment without risking our code.
 
+First things first, read the [official QMK Contributor guidelines](https://docs.qmk.fm/#/contributing) in its entirety.
+
 ### Branch
 
 *when in doubt, branch*
