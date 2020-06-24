@@ -60,7 +60,7 @@ Github will display conflicts at the button of the PR page.
 ```shell
 #   git will go from commit to commit in the changes
 #   if a conflict is found, it will display the filenames
-#   open the files with and editor and look for the conflict indicators
+#   open the files with your favourite editor and look for the conflict indicators
 #
 #
 #   <<<<<<< HEAD
