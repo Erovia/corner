@@ -50,7 +50,7 @@ Check if both remotes are available:
 
 ```shell
 [erovia@ws]$ git remote -v
-origin  https://github.com/qmk/qmk_firmware.git (fetch
+origin  https://github.com/qmk/qmk_firmware.git (fetch)
 origin  https://github.com/qmk/qmk_firmware.git (push)
 myfork  git@github.com:Erovia/qmk_firmware.git (fetch)
 myfork  git@github.com:Erovia/qmk_firmware.git (push)
