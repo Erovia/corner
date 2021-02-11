@@ -159,3 +159,41 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
 }
 ```
+
+---
+
+### Use lighting as timer indicator
+This was made for a friend as a visual indicator for a spell cooldown.  
+The example uses QMK's [Backlight](https://docs.qmk.fm/#/feature_backlight) feature, but adapting it to RGB [Lighting](https://docs.qmk.fm/#/feature_rgblight)/[Matrix](https://docs.qmk.fm/#/feature_rgb_matrix) is as easy as changing the called functions.  
+The "game mode" can be turned off/on with NumLock and is triggered by `KC_L`.
+
+```c
+static uint32_t game_timer;
+static bool game_mode = false;
+static bool timer_running = false;
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case KC_NLCK:
+      if (record->event.pressed) {
+              game_mode = !game_mode;
+      }
+      return true;
+    case KC_L:
+      if (record->event.pressed && game_mode && !timer_running) {
+        game_timer = timer_read32();
+        timer_running = true;
+        backlight_enable();
+      }
+      return true;
+    }
+  return true;
+}
+
+void matrix_scan_user(void) {
+  if (timer_running && timer_elapsed32(game_timer) >= 90000) {
+    timer_running = false;
+    backlight_disable();
+  }
+}
+```
