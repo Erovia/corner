@@ -51,6 +51,65 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 ---
 
+### Multi-function, layer-aware rotary encoder
+Make the previous example work differently based on the active layer.
+
+{{% notice note %}}
+You will need the `process_record_user` function, the `custom_keycodes` enum and the `secondary_function` boolean from the previous example.
+{{% /notice %}}
+
+```c
+enum layer_name {
+    _BASE,
+    _FN
+};
+
+// Define what encoder does depending on direction flag.
+void encoder_update_user(uint8_t index, bool clockwise) {
+  // the first encoder, in case you have more
+  if (index == 0) {
+    if (layer_state_is(_BASE)) {
+      if (clockwise) {
+        if (secondary_function) {
+          tap_code(KC_RIGHT);
+        }
+        else {
+          tap_code(KC_UP); 
+        }
+      }
+      else {
+        if (secondary_function) {
+          tap_code(KC_LEFT);
+        }
+        else {
+          tap_code(KC_DOWN);
+        }
+      }
+    }
+    else if (layer_state_is(_FN)) {
+      if (clockwise) {
+        if (secondary_function) {
+          tap_code(KC_F12);
+        }
+        else {
+          tap_code(KC_VOLU); 
+        }
+      }
+      else {
+        if (secondary_function) {
+          tap_code(KC_F11);
+        }
+        else {
+          tap_code(KC_VOLD);
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
 ### Turn on Numlock for a specific layer
 And turn it off on other layers
 
@@ -71,6 +130,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 ```
+
+---
 
 ### Change the behaviour of one key by another
 This is really similar to the [encoder one](#multi-function-rotary-encoder)
