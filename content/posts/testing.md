@@ -39,7 +39,7 @@ There are also multiple ways to do this (as is usual with `git`), this is just m
     ```
 
 {{% notice note %}}
-You can call the local branch anything you like, I just usally call them `review/<number>` so I know what it was for even later.
+You can call the local branch anything you like, I just usually call them `review/<number>` so I know what it was for even later.
 {{% /notice %}}
 
 1. Use the feature, rebase it on the `master` branch, try to break it
