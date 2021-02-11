@@ -12,8 +12,8 @@ The [original QMK pull request](https://github.com/qmk/qmk_firmware/pull/4034) n
 As QMK is a pretty fast-moving project, the original code for the keyboard did not build with new QMK.  
 
 I first heard about this keyboard when a community member tried to flash his board and asked for help.  
-Sadly, I was not able to work out all the things without having access to the hardware and my abition to make it work again had to be put on hold.  
-Until Jack was kind enough to send my two unassembled kits.  
+Sadly, I was not able to work out all the things without having access to the hardware and my ambition to make it work again had to be put on hold.  
+Until Jack was kind enough to send me two unassembled kits.  
 Now I have the hardware fully working with mainline QMK so I thought I'll document a process of building and compiling and flashing this board.  
 
 ### Hardware
@@ -94,7 +94,7 @@ If everything went well, it should be recognized as an USBasp flasher.
 ### Firmware
 
 The firmware currently lives in [my QMK fork](https://github.com/Erovia/qmk_firmware/tree/planck_thk_revived), but I'll get it merged upstream, to not repeat history.  
-The board should be compatible with most Planck and ortho4x12/planck_mit keymaps, but I created a `thk` one, to showcase it's unique features.  
+The board should be compatible with most Planck and ortho4x12/planck_mit keymaps, but I created a `thk` one, to showcase its unique features.  
 
 ```shell
 [erovia@ws]$ qmk flash -kb planck/thk -km thk
