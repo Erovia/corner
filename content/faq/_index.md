@@ -15,7 +15,7 @@ Quick answers to frequent questions.
 
 ### Q: Do I need to code to be able to use QMK?
 **A**: Nope. A lot of people only use the [Configurator](https://config.qmk.fm). Even if someone decides to write code, usually they do it by adapting the examples in the documentation or other's code.  
-(All roads lead to ~~Rome~~ [drashna's userspace](https://github.com/qmk/qmk_firmware/tree/master/users/drashna).)
+(All roads lead to ~~Rome~~ [drashna's userspace](https://github.com/drashna/qmk_userspace).)
 
 ---
 
